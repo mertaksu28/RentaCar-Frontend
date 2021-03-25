@@ -1,3 +1,24 @@
-<ul class="list-group" *ngFor="let brand of brands">
-    <li class="list-group-item">{{brand.brandName}}</li>
-  </ul>
+<ul class="list-group">
+  <li
+    (click)="setCurrentBrand(brand)"
+    routerLink="/cars/brand/{{ brand.brandId }}"
+    *ngFor="let brand of brands"
+    [class]="getCurrentBrandClass(brand)"
+  >
+    {{ brand.brandName }}
+  </li>
+</ul>
+
+<!-- <ul class="list-group">
+  <li [class]="getAllCategoryClass()" routerLink="/cars">Tüm Ürünler</li>
+  <li
+    (click)="setCurrentCotegory(category)"
+    routerLink="/products/category/{{ category.categoryId }}"
+    *ngFor="let category of categories"
+    [class]="getCurrentCategoryClass(category)"
+  >
+    {{ category.categoryName }}
+  </li>
+</ul>
+
+<h5 *ngIf="currentCategory">{{ currentCategory.categoryName }} Seçtiniz</h5> -->
