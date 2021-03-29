@@ -10,6 +10,7 @@ import { BrandService } from 'src/app/services/brand.service';
 export class BrandComponent implements OnInit {
   currentBrand: Brand;
   brands: Brand[] = [];
+  brandText: string = '';
 
   constructor(private brandService: BrandService) {}
 
@@ -27,13 +28,11 @@ export class BrandComponent implements OnInit {
     this.currentBrand = brand;
   }
 
-  getCurrentBrandClass(brand:Brand){
-    if (brand==this.currentBrand) {
+  getCurrentBrandClass(brand: Brand) {
+    if (brand == this.currentBrand) {
       return 'list-group-item active';
-    }
-    else{
+    } else {
       return 'list-group-item';
     }
   }
-
 }

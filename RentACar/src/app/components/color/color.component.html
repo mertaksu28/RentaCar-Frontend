@@ -1,4 +1,18 @@
-<ul class="list-group" *ngFor="let color of colors">
+<div class="mb-3">
+  <label for="colorText" class="form-label">Renk Ara</label>
+  <input
+    type="text"
+    [(ngModel)]="colorText"
+    class="form-control"
+    id="colorText"
+    placeholder="Arama ifadesi giriniz"
+  />
+</div>
+
+<div *ngIf="colorText" class="alert alert-success">
+  {{ colorText }} Aradınız.
+</div>
+<ul class="list-group" *ngFor="let color of colors | colorPipe: colorText">
   <li
     routerLink="/cars/color/{{ color.colorId }}"
     (click)="setCurrentColor(color)"

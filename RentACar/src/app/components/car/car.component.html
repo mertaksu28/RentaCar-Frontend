@@ -1,37 +1,46 @@
-<!-- <table class="table">
-  <thead>
-    <tr style="background-color: black; color: red;">
-      <th>Id</th>
-      <th>Marka</th>
-      <th>Rengi</th>
-      <th>Model Yılı</th>
-      <th>Günlük Fiyat</th>
-      <th>Açıklama</th>
-    </tr>
-  </thead>
+<div class="row">
+  <select class="col-md-3" [(ngModel)]="currentColor.colorId" class="form-select">
+    <option [selected]="setCurrentColor(c)" *ngFor="let c of colors" [value]="currentColor.colorId">
+      {{ c.colorName }}
+    </option>
+  </select>
+  <select class="col-md-3" [(ngModel)]="currentBrand.brandId" class="form-select">
+    <option [selected]="setCurrentBrand(b)" *ngFor="let b of brands" [value]="currentBrand.brandId">
+      {{ b.brandName }}
+    </option>
+  </select>
 
-  <tr *ngFor="let car of cars">
-    <td>{{ car.id }}</td>
-    <td>{{ car.brandName }}</td>
-    <td>{{ car.colorName }}</td>
-    <td>{{ car.modelYear }}</td>
-    <td>{{ car.dailyPrice}}</td>
-    <td>{{ car.description }}</td>
-  </tr>
-</table> -->
-
-<div class="container col-md-10">
-  <div class="row"   >
-<div class="example-card mt-3 me-md-3 " style="width: 18rem;" *ngFor="let car of cars" >
-  <img [src]="url+car.imagePath" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">{{ car.description }}</h5>
-    <p class="card-text">Marka : {{ car.brandName }}</p>
-    <p class="card-text">Günlük Fiyat : {{ car.dailyPrice }}</p>
-    <p class="card-text">Renk : {{ car.colorName }}</p>
-    <button type="button" routerLink = "/cars/detail/{{ car.id }}"  class="btn btn-primary">Detay</button>
+  <div>
+    <button *ngIf="currentColor && currentBrand" type="button" routerLink="/cars/brand/{{ currentBrand.brandId }}/color/{{
+        currentColor.colorId
+      }}" class="col-md-3 btn btn-primary">
+      Filtrele
+    </button>
   </div>
-</div> 
-<div  *ngIf="empty" > <h2 class="mt-4">Filtreye Uygun Araç Bulunamadı</h2></div> </div>
+</div>
 
+<div class="mb-3">
+  <label for="carText" class="form-label">Araba Ara</label>
+  <input type="text" [(ngModel)]="carText" class="form-control" id="carText" placeholder="Arama ifadesi giriniz" />
+</div>
+
+<div *ngIf="carText" class="alert alert-success">{{ carText }} Aradınız.</div>
+<div class="container col-md-10">
+  <div class="row">
+    <div class="example-card mt-3 me-md-3" style="width: 18rem" *ngFor="let car of cars | carPipe: carText">
+      <img [src]="url + car.imagePath" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{ car.description }}</h5>
+        <p class="card-text">Marka : {{ car.brandName }}</p>
+        <p class="card-text">Günlük Fiyat : {{ car.dailyPrice }}</p>
+        <p class="card-text">Renk : {{ car.colorName }}</p>
+        <button type="button" routerLink="/cars/detail/{{ car.id }}" class="btn btn-primary">
+          Detay
+        </button>
+      </div>
+    </div>
+    <div *ngIf="empty">
+      <h2 class="mt-4">Filtreye Uygun Araç Bulunamadı</h2>
+    </div>
+  </div>
 </div>
