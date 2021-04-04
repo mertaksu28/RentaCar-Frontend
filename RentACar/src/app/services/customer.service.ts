@@ -8,7 +8,7 @@ import { ListResponseModule } from '../modules/listResponseModule';
   providedIn: 'root',
 })
 export class CustomerService {
-  apiUrl = 'https://localhost:44392/api/customers/getcustomerdetail';
+  apiUrl = 'https://localhost:44367/api/customers/getcustomerdetail';
   constructor(private httpClient: HttpClient) {}
 
   getCustomers(): Observable<ListResponseModule<Customer>> {

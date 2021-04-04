@@ -11,10 +11,15 @@ import { CustomerComponent } from './components/customer/customer.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RentalComponent } from './components/rental/rental.component';
 import { CarDetailDtoComponent } from './components/car-detail-dto/car-detail-dto.component';
-import { FormsModule } from '@angular/forms';
 import { CarPipePipe } from './pipes/car-pipe.pipe';
 import { BrandPipePipe } from './pipes/brand-pipe.pipe';
 import { ColorPipePipe } from './pipes/color-pipe.pipe';
+import { RentalAddComponent } from './components/rental-add/rental-add.component';
+import { PaymentComponent } from './components/payment/payment.component';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -28,12 +33,18 @@ import { ColorPipePipe } from './pipes/color-pipe.pipe';
     CarDetailDtoComponent,
     CarPipePipe,
     BrandPipePipe,
-    ColorPipePipe
+    ColorPipePipe,
+    RentalAddComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({ positionClass: "toast-bottom-right" }),
+
     FormsModule
   ],
   providers: [],

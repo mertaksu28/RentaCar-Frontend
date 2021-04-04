@@ -8,7 +8,7 @@ import { ListResponseModule } from '../modules/listResponseModule';
   providedIn: 'root',
 })
 export class BrandService {
-  apiUrl = 'https://localhost:44392/api/brands/getall';
+  apiUrl = 'https://localhost:44367/api/brands/getall';
 
   constructor(private httpClient: HttpClient) {}
 

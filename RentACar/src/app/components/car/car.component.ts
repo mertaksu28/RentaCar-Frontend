@@ -20,7 +20,7 @@ export class CarComponent implements OnInit {
   currentBrand: Brand = { brandId: 23, brandName: '' };
   currentColor: Color = { colorId: 15, colorName: '' };
 
-  url: string = 'https://localhost:44392';
+  url: string = 'https://localhost:44367';
   empty: boolean = false;
   carText = '';
 

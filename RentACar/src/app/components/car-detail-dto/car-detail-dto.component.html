@@ -1,25 +1,23 @@
 <div *ngIf="dataLoaded==true" class="row">
-    <div class="container col-md-10">
-      <div class="row">
-        <div  *ngFor="let carImage of car.carImages"
-          class="example-card mt-3 me-md-3"
-          style="width: 18rem"
-        >
-          <img  [src]="url + carImage.imagePath" class="card-img-top" alt="..." />
-        </div></div>
-      </div> 
-    
-    
-    <div  class="container col-md-10">
-      <div class="card-body" >
-        <h5 class="card-title">{{ car.description }}</h5>
-        <p class="card-text">Marka : {{ car.brandName }}</p>
-        <p class="card-text">Günlük Fiyat : {{ car.dailyPrice }}</p>
-        <p class="card-text">Renk : {{ car.colorName }}</p>
-        <button type="button" routerLink="/cars" class="btn btn-success">
-          Kirala
-        </button>
+  <div class="container col-md-10">
+    <div class="row">
+      <div *ngFor="let carImage of car.carImages" class="example-card mt-3 me-md-3" style="width: 18rem">
+        <img *ngIf="carImage.imagePath" [src]="url + carImage.imagePath" class="card-img-top" alt="..." />
       </div>
     </div>
-    
   </div>
+
+
+  <div class="container col-md-10">
+    <div class="card-body">
+      <h5 class="card-title">{{ car.description }}</h5>
+      <p class="card-text">Marka : {{ car.brandName }}</p>
+      <p class="card-text">Günlük Fiyat : {{ car.dailyPrice }}</p>
+      <p class="card-text">Renk : {{ car.colorName }}</p>
+      <button *ngIf="carControl == false" type="button" class="btn btn-secondary btn-lg" disabled>Araç Kirada</button>
+
+    </div>
+  </div>
+  <app-rental-add *ngIf="carControl == true" [car]="car"></app-rental-add>
+
+</div>

@@ -1,0 +1,46 @@
+<div class="card-mt-4">
+    <div class="card-header text-center">
+        <strong>Ödeme İşlemi</strong>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="inputbox mt-3">
+                <span>Kart Üzerindeki Ad Soyad</span>
+                <input [(ngModel)]="nameOnTheCard" type="text" name="name" class="form-control" required="required">
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="inputbox mt-3 mr-2">
+                        <span>Kart Numarası</span>
+                        <input [(ngModel)]="cardNumber" type="text" name="name" class="form-control"
+                            required="required">
+                        <i class="fa fa-credit-card"></i>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex flex-row">
+                        <div class="inputbox mt-3 mr-2">
+                            <span>Son Kullanım Tarihi</span>
+                            <input [(ngModel)]="expirationDate" type="text" name="name" class="form-control"
+                                required="required">
+                        </div>
+                        <div class="inputbox mt-3 mr-2">
+                            <span>Güvenlik Kodu</span>
+                            <input [(ngModel)]="cardCvv" type="text" name="name" class="form-control"
+                                required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <div class="row">
+            <label> <strong>{{totalPrice | currency: "₺"}}</strong> </label>
+            <button (click)="rentACar()" class="btn btn-success">
+
+                Ödeme Yap
+            </button>
+        </div>
+    </div>
+</div>

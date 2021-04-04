@@ -8,7 +8,7 @@ import { Brand } from '../modules/brand';
   providedIn: 'root',
 })
 export class CarService {
-  apiUrl = 'https://localhost:44392/api/';
+  apiUrl = 'https://localhost:44367/api/';
 
   constructor(private httpClient: HttpClient) {}
 

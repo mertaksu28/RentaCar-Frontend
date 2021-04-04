@@ -1,0 +1,46 @@
+<div class="content">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="title">Kiralama</h5>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="rentalAddForm">
+                    <div class="mb-3">
+                        <label for="carId">Araç Id</label>
+                        <div class="form-group">
+                            <input type="text" id="carId" formControlName="carId" placeholder="{{car.id}}"
+                                class="form-control" readonly />
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="form-floating mb-3">
+                            <select class="form-select" id="customers" formControlName="customerId">
+                                <option value="">-- Müşteri Seçiniz --</option>
+
+                                <option *ngFor="let customer of customers" [ngValue]="customer.id">
+                                    {{ customer.firstName }} {{customer.lastName}}
+                                </option>
+                            </select>
+                            <label for="customers">Customer</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="rentDate" class="form-label">Başlangıç Tarihi</label>
+                        <input formControlName="rentDate" type="date" class="form-control" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="returnDate" class="form-label">Bitiş Tarihi</label>
+                        <input formControlName="returnDate" type="date" class="form-control" />
+                    </div>
+                </form>
+            </div>
+            <div (click)="add()" class="card-footer">
+                <button class="btn btn-fill btn-success">Kirala</button>
+            </div>
+        </div>
+    </div>
+</div>
