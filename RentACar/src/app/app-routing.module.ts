@@ -9,6 +9,7 @@ import { CarComponent } from './components/car/car.component';
 import { ColorAddComponent } from './components/color-add/color-add.component';
 import { ColorUpdateComponent } from './components/color-update/color-update.component';
 import { CustomerComponent } from './components/customer/customer.component';
+import { LoginComponent } from './components/login/login.component';
 import { PaymentComponent } from './components/payment/payment.component';
 import { RentalComponent } from './components/rental/rental.component';
 
@@ -28,10 +29,11 @@ const routes: Routes = [
   { path: 'car-update/:carId', component: CarUpdateComponent },
   { path: 'brand-update/:brandId', component: BrandUpdateComponent },
   { path: 'color-update/:colorId', component: ColorUpdateComponent },
+  { path: 'login', component: LoginComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

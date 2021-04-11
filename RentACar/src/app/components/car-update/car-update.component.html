@@ -1,5 +1,5 @@
 <div *ngIf="dataLoaded==true">
-    <div class="content">
+  <div class="content">
     <div class="col-md-12">
       <div class="card">
         <div class="card-header">
@@ -7,50 +7,54 @@
         </div>
         <div class="card-body">
           <form [formGroup]="carUpdateForm">
-            
-  
             <div class="mb-3">
               <div class="form-floating mb-3">
-                  <select class="form-select" id="brands" formControlName="brandId">
-                     <option value="">-- Marka Seçiniz --</option>
-          
-                     <option *ngFor="let brand of brands" [ngValue]="brand.brandId">
-                        {{ brand.brandName }} 
-                     </option>
-                  </select>
-                  <label for="brands">Marka</label>
-               </div>
-            </div>
-  
-            <div class="mb-3">
-                <div class="form-floating mb-3">
-                    <select class="form-select" id="colors" formControlName="colorId">
-                       <option value="">-- Renk Seçiniz --</option>
-            
-                       <option *ngFor="let color of colors" [ngValue]="color.colorId">
-                          {{ color.colorName }} 
-                       </option>
-                    </select>
-                    <label for="colors">Renk</label>
-                 </div>
+                <select class="form-select" id="brands" formControlName="brandId">
+                  <option value="">-- Marka Seçiniz --</option>
+
+                  <option *ngFor="let brand of brands" [ngValue]="brand.brandId">
+                    {{ brand.brandName }}
+                  </option>
+                </select>
+                <label for="brands">Marka</label>
               </div>
-  
-  
-              <div class="mb-3"><label for="description">Açıklama</label>
-                <div class="form-group">
-                  <input type="text" id="description" formControlName="description" class="form-control" placeholder="{{car.description}}"  />
-                </div></div>
+            </div>
 
-                <div class="mb-3"><label for="modelYear">Model</label>
-                    <div class="form-group">
-                      <input type="text" id="modelYear" formControlName="modelYear" class="form-control" placeholder="{{car.modelYear}}" />
-                    </div></div>
+            <div class="mb-3">
+              <div class="form-floating mb-3">
+                <select class="form-select" id="colors" formControlName="colorId">
+                  <option value="">-- Renk Seçiniz --</option>
 
-                    <div class="mb-3"><label for="dailyPrice">Günlük Fiyat</label>
-                        <div class="form-group">
-                          <input type="number" id="dailyPrice" formControlName="dailyPrice" class="form-control" placeholder="{{car.dailyPrice}}"  />
-                        </div></div>
-                        
+                  <option *ngFor="let color of colors" [ngValue]="color.colorId">
+                    {{ color.colorName }}
+                  </option>
+                </select>
+                <label for="colors">Renk</label>
+              </div>
+            </div>
+
+
+            <div class="mb-3"><label for="description">Açıklama</label>
+              <div class="form-group">
+                <input type="text" id="description" formControlName="description" class="form-control"
+                  placeholder="{{car.description}}" />
+              </div>
+            </div>
+
+            <div class="mb-3"><label for="modelYear">Model</label>
+              <div class="form-group">
+                <input type="text" id="modelYear" formControlName="modelYear" class="form-control"
+                  placeholder="{{car.modelYear}}" />
+              </div>
+            </div>
+
+            <div class="mb-3"><label for="dailyPrice">Günlük Fiyat</label>
+              <div class="form-group">
+                <input type="number" id="dailyPrice" formControlName="dailyPrice" class="form-control"
+                  placeholder="{{car.dailyPrice}}" />
+              </div>
+            </div>
+
           </form>
         </div>
         <div (click)="update()" class="card-footer">
