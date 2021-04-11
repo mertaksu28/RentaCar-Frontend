@@ -1,27 +1,40 @@
 # RentACar
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.
+### ANASAYFA
+![Anasayfa](https://user-images.githubusercontent.com/65791804/114317898-0675cf00-9b13-11eb-9c8a-5fc75233a94a.png)
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Araç Detayları ve Kiralama
 
-## Code scaffolding
+![Araç Detayları ve Kiralama](https://user-images.githubusercontent.com/65791804/114317904-0fff3700-9b13-11eb-8065-b0d6f1899f71.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Araç Ekleme
 
-## Build
+![Araç Ekleme](https://user-images.githubusercontent.com/65791804/114318394-56559580-9b15-11eb-9419-d2da269515a2.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+### Kiralama Bilgileri
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![Kiralama Bilgileri](https://user-images.githubusercontent.com/65791804/114318406-708f7380-9b15-11eb-89e1-22ae1a89b91c.png)
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Kiralama İşlemleri
 
-## Further help
+![Kiralama İşlemleri](https://user-images.githubusercontent.com/65791804/114318426-8866f780-9b15-11eb-880b-26701afd403d.png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+### Bildirim İşlemleri
+
+![Bildirim İşlemleri](https://user-images.githubusercontent.com/65791804/114318514-fd3a3180-9b15-11eb-87e1-de3488d6a306.png)
+
+
+### Ödeme İşlemleri
+
+![Ödeme İşlemleri](https://user-images.githubusercontent.com/65791804/114318647-a08b4680-9b16-11eb-8d8e-2de0a830bc6d.png)
+
+
+## Login Ekranı
+
+![Login](https://user-images.githubusercontent.com/65791804/114318442-9ae13100-9b15-11eb-9cdf-6710165eff09.png)
+
