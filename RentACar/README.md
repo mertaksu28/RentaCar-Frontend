@@ -13,11 +13,6 @@
 ![Araç Ekleme](https://user-images.githubusercontent.com/65791804/114318394-56559580-9b15-11eb-9419-d2da269515a2.png)
 
 
-### Kiralama Bilgileri
-
-![Kiralama Bilgileri](https://user-images.githubusercontent.com/65791804/114318406-708f7380-9b15-11eb-89e1-22ae1a89b91c.png)
-
-
 ### Kiralama İşlemleri
 
 ![Kiralama İşlemleri](https://user-images.githubusercontent.com/65791804/114318426-8866f780-9b15-11eb-880b-26701afd403d.png)
